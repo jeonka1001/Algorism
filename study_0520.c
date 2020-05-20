@@ -26,3 +26,18 @@ class Solution {
         return answer%1234567;
     }
 }
+
+class Solution
+{
+    public int solution(int []A, int []B)
+    {
+        int answer = 0;
+        int len = A.length;
+        java.util.Arrays.sort(A);
+        java.util.Arrays.sort(B);
+        for(int i = 0 ; i <len ; i ++){
+            answer +=(A[i]*B[(len - i)-1]);
+        }
+        return answer;
+    }
+}
