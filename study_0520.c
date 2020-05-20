@@ -12,3 +12,17 @@ class Solution {
         return answer;
     }
 }
+
+class Solution {
+    public int solution(int n) {
+        int answer = 0;
+        java.util.ArrayList<Integer> arr = new java.util.ArrayList<>();
+        arr.add(0);
+        arr.add(1);
+        for(int i = 2 ; i <= n ; i++){
+            arr.add(i,(arr.get(i-1)+arr.get(i-2))%1234567);
+        }
+        answer = arr.get(n);
+        return answer%1234567;
+    }
+}
